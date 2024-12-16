@@ -11,5 +11,23 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
-  }
+  },
+  "name": "crud-raddy",
+  "version": "1.0.0",
+  "description": "later",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fcortesbio/crud-raddy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fcortesbio/crud-raddy/issues"
+  },
+  "homepage": "https://github.com/fcortesbio/crud-raddy#readme"
 }
