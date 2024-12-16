@@ -1,0 +1,15 @@
+# Ignore dependency directories
+/node_modules/
+
+# Ignore sensitive information
+.env
+*.pem
+*.key
+*.cert
+
+# Ignore common editor and IDE files
+.vscode/
+*.swp
+*.swo
+*.tmp
+*.bak
