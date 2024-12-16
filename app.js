@@ -2,6 +2,7 @@
 require("dotenv").config();
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
+const morgan = require("morgan")
 
 // define app as instance of Express.js, and port 5000
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.static("public"));  // Static files
 app.use(expressLayouts); 
 app.set("layout", "./layouts/main");
 app.set("view engine", "ejs"); 
+app.use(morgan("common"))
 
 // ROUTE HANDLERS
 // Home 
