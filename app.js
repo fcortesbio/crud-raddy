@@ -20,15 +20,7 @@ app.set("view engine", "ejs");
 app.use(morgan(":method :url :status :res[content-lenght] - :response-time ms :date[web]"))
 
 // ROUTE HANDLERS
-// Home 
-app.get("/", (req, res) => {
-
-    const locals = {
-        title : "NodeJs",
-        description : "Free NodeJS User Management System"
-    }
-    res.render("index", locals)
-}); 
+app.use("/", require("./server/routes/customer"))
 
 // Handle 404 
 app.get("*", (req, res) => {
