@@ -16,7 +16,8 @@ app.use(express.static("public"));  // Static files
 app.use(expressLayouts); 
 app.set("layout", "./layouts/main");
 app.set("view engine", "ejs"); 
-app.use(morgan("common"))
+// app.use(morgan("common"))
+app.use(morgan(":method :url :status :res[content-lenght] - :response-time ms :date[web]"))
 
 // ROUTE HANDLERS
 // Home 
@@ -26,10 +27,17 @@ app.get("/", (req, res) => {
         title : "NodeJs",
         description : "Free NodeJS User Management System"
     }
-
     res.render("index", locals)
-
 }); 
+
+// Handle 404 
+app.get("*", (req, res) => {
+    const locals = {
+        title: "404", 
+        description: "The requested object could not be found in server"
+    }
+    res.status(404).render("404")
+})
 
 app.listen(port, () => {
     console.log(`App listening on port '${port}'`)
